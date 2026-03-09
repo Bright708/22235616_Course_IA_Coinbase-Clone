@@ -1,0 +1,33 @@
+{
+  "email": [
+    {
+      "id": "1",
+      "email": "Owurakufrimpong772@gmail.com"
+    },
+    {
+      "id": "2",
+      "email": "owurakufrimpong@gmail.com"
+    },
+    {
+      "id": "3",
+      "email": "Owurakufrimpong771@gmail.com"
+    }
+  ],
+  "password": [
+    {
+      "id": "1",
+      "email": "Owurakufrimpong772@gmail.com",
+      "password": "Ohemaa2020"
+    },
+    {
+      "id": "2",
+      "email": "owurakufrimpong@gmail.com",
+      "password": "Ohemaa2020"
+    },
+    {
+      "id": "3",
+      "email": "Owurakufrimpong771@gmail.com",
+      "password": "Ohemaa2020"
+    }
+  ]
+}
