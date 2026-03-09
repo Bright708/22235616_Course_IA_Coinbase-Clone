@@ -5,7 +5,7 @@ import IGimg from "./assets/Coinbase - Buy and Sell Bitcoin, Ethereum, and more 
 import Tiktokimg from "./assets/Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust/imgi_24_tiktok-light.svg";
 const Lasthomepagesection = () => {
   return (
-    <div className="grid-cols-2 lg:grid-cols-5 bg-[#eef0f4] grid   w-full max-h-auto p-10 font-semibold text-[1.2rem]">
+    <div className="grid-cols-2 p-5 lg:grid-cols-5 bg-[#eef0f4] grid  w-full max-h-auto  font-semibold text-[1.2rem]">
       <img src={Coinbaselogo} alt="" className="h-9 w-9" />
       <div className="flex flex-col">
         <span>Company</span>

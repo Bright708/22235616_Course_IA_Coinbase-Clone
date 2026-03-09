@@ -318,7 +318,7 @@ const Heropage = ({ loggedIn }) => {
           <img
             src={StockImage}
             alt=""
-            className="max-w-106.75 max-h-10.78 md:max-w-176.75 max-h-18.78 rounded-[25px]"
+            className=" w-70 lg:w-106.75 max-h-10.78 md:max-w-176.75 max-h-18.78 rounded-[25px]"
           />
         </div>
         <div className="mt-8">
@@ -368,7 +368,7 @@ const Heropage = ({ loggedIn }) => {
             See more assets
           </Link>
         </div>
-        <div className="w-120 bg-black h-159.5 rounded-[30px] text-white flex flex-col items-center  lg:w-177 ">
+        <div className="w-90 p-8 bg-black h-170 rounded-[30px] text-white flex flex-col items-center  lg:w-177 ">
           <Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
             <Tabs
               value={value}
@@ -435,7 +435,7 @@ const Heropage = ({ loggedIn }) => {
           </Box>
           <CustomTabPanel value={value} index={0}>
             <div className="flex flex-col gap-16 w-full ">
-              <div className="gap-y-12 text-[1.2rem] lg:text-[2.1rem] h-auto flex flex-col gap-y-15  ">
+              <div className="gap-y-12 text-[1.1rem] lg:text-[2.1rem] h-auto flex flex-col gap-y-15  ">
                 {CRYPTO_CONFIG.tradable.map((crypto) => (
                   <div
                     key={crypto.id}
@@ -446,7 +446,7 @@ const Heropage = ({ loggedIn }) => {
                       <span>{crypto.name}</span>
                     </div>
                     <div className="flex-col h-6 ">
-                      <span className=" flex justify-end">
+                      <span className=" text-[1rem] lg:flex justify-end">
                         {loading
                           ? "Loading..."
                           : formatPrice(cryptoPrices.tradable[crypto.id])}
@@ -466,7 +466,7 @@ const Heropage = ({ loggedIn }) => {
           </CustomTabPanel>
           <CustomTabPanel value={value} index={1}>
             <div className="flex flex-col gap-16 w-full">
-              <div className="gap-y-12 text-[1.2rem] lg:text-[2.1rem] h-auto flex flex-col gap-y-15  ">
+              <div className="gap-y-12 text-[1.1rem] lg:text-[2.1rem] h-auto flex flex-col gap-y-15  ">
                 {CRYPTO_CONFIG.topGainers.map((crypto) => (
                   <div
                     key={crypto.id}
@@ -477,7 +477,7 @@ const Heropage = ({ loggedIn }) => {
                       <span>{crypto.name}</span>
                     </div>
                     <div className="flex-col justify-end h-6">
-                      <span className=" flex justify-end">
+                      <span className="text-[1rem] lg:flex justify-end">
                         {loading
                           ? "Loading..."
                           : formatPrice(cryptoPrices.topGainers[crypto.id])}
@@ -499,7 +499,7 @@ const Heropage = ({ loggedIn }) => {
           </CustomTabPanel>
           <CustomTabPanel value={value} index={2}>
             <div className="flex flex-col gap-16 w-full">
-              <div className="gap-y-12 text-[1.2rem] lg:text-[2.1rem] h-auto flex flex-col gap-y-15 ">
+              <div className="gap-y-12 text-[1.1rem] lg:text-[2.1rem] h-auto flex flex-col gap-y-15 ">
                 {CRYPTO_CONFIG.newOnCoinbase.map((crypto) => (
                   <div
                     key={crypto.id}
@@ -510,7 +510,7 @@ const Heropage = ({ loggedIn }) => {
                       <span>{crypto.name}</span>
                     </div>
                     <div className="flex-col justify-end h-6">
-                      <span className=" flex justify-end">
+                      <span className=" text-[1rem] lg:flex justify-end">
                         {loading
                           ? "Loading..."
                           : formatPrice(cryptoPrices.newOnCoinbase[crypto.id])}
@@ -536,7 +536,7 @@ const Heropage = ({ loggedIn }) => {
         <img
           src={AdvanceToolsimg}
           alt=""
-          className="w-135 h-108.75 rounded-[25px]"
+          className="w-100 h-90 lg:h-108.75 lg:w-135  rounded-[25px]"
         />
         <div className="flex flex-col gap-y-8 items-start">
           <h1 className="text-[3.2rem]">
@@ -579,14 +579,14 @@ const Heropage = ({ loggedIn }) => {
         <img
           src={Zerofees}
           alt=""
-          className="w-136 h-109 rounded-[25px] bg-[#eef0f4]"
+          className="h-50 lg:h-109 w-136  rounded-[25px] bg-[#eef0f4]"
         />
       </div>
-      <div className=" flex flex-col lg:flex-row bg-white items-center max-h-auto w-full justify-center p-16 gap-x-[54px] font-semibold ">
+      <div className=" flex flex-col lg:flex-row bg-white items-center max-h-auto w-full justify-center p-7 gap-x-[54px] font-semibold ">
         <img
           src={BaseAppimg}
           alt=""
-          className="w-136 h-109 rounded-[25px] bg-[#eef0f4]"
+          className=" h-50 lg:h-109 w-136  rounded-[25px] bg-[#eef0f4]"
         />
         <div className="flex flex-col gap-y-8 items-start">
           <h1 className="text-[3.2rem] flex flex-col">
@@ -606,7 +606,7 @@ const Heropage = ({ loggedIn }) => {
           </button>
         </div>
       </div>
-      <div className="bg-[#eef0f4] flex flex-col items-center max-h-auto w-full justify-center p-16 gap-x-[54px] font-semibold ">
+      <div className="bg-[#eef0f4] flex flex-col items-center max-h-auto w-full justify-center p-7 gap-x-[54px] font-semibold ">
         <div className="flex flex-col gap-y-7 lg:flex-row gap-x-48.75 ">
           <h1 className="text-[4.2rem] leading-14">
             New to crypto? <br />
@@ -685,9 +685,9 @@ const Heropage = ({ loggedIn }) => {
           </section>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row bg-white  items-center max-h-auto w-full justify-center p-16 gap-x-[54px] font-semibold ">
+      <div className="flex flex-col lg:flex-row bg-white items-center max-h-auto w-full justify-center p-7 gap-x-[44px] font-semibold ">
         <div className="mt-8 pl-0">
-          <h1 className="text-[5.5rem]  flex-col leading-18">
+          <h1 className="text-[5.5rem] flex-col leading-18">
             Take control <br />
             of your money
           </h1>
@@ -718,10 +718,10 @@ const Heropage = ({ loggedIn }) => {
         <img
           src={Alltradables}
           alt=""
-          className=" hidden lg:block h-[581px] w-[741px] "
+          className=" hidden lg:block h-[481px] w-[641px] "
         />
       </div>
-      <div className="bg-white flex flex-col items-center h-[50vh] justify-end  w-full  p-16 gap-x-[54px] font-semibold opacity-50">
+      <div className="bg-white flex flex-col items-center h-[50vh] mt-50 justify-end  w-full  p-16 gap-x-[54px] font-semibold opacity-50">
         <h1>DEX trading is offered by Coinbase Bermuda Technologies Ltd.</h1>
         <h2 className="mt-4">
           Products and features may not be available in all regions. Information
@@ -735,10 +735,10 @@ const Heropage = ({ loggedIn }) => {
         </h2>
       </div>
       <Lasthomepagesection />
-      <div className="p-2 lg:p-16 bg-[#eef0f4] flex h-auto justify-between  w-full  font-semibold text-[1.2rem] opacity-50">
-        <div className="gap-x-2 lg:gap-x-8 flex ">
+      <div className="p-2 flex flex-col text-[1rem] gap-y-6 lg:flex-row p-7 bg-[#eef0f4]  h-auto justify-between  w-full  font-semibold text-[1.2rem] opacity-50">
+        <div className="gap-x-7 lg:gap-x-8 flex ">
           <h1>© 2026 Coinbase</h1>
-          <ul className="flex gap-4 list-disc">
+          <ul className="gap-5 lg:flex gap-4 list-disc">
             <li>Privacy</li>
             <li>Terms & Conditions</li>
           </ul>

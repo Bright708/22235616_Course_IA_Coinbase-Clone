@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import Menubarlist from "./Components/Menubarlist";
 import Coinbaselogo from "./assets/Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust/imgi_1_coinbaseLogoNavigation-4.svg";
 import Closebutton from "./assets/close.png";
-import SearchIcon from "./assets/coinbase.com-3.svg";
 import Humburger from "./assets/menu.png";
+import SearchIcon from "./assets/search-interface-symbol.png";
 const Menubar = ({ subMenu, setSubmenu, handleActiveMenu, loggedIn }) => {
   return (
-    <header className=" md:w-full min-h-17.25 text-[1.2rem] font-semibold bg-white shadow-sm">
+    <header className=" md:w-full min-h-17.25 text-[1.2rem] font-medium bg-white shadow-sm">
       <div className="md:w-full flex md:flex items-center gap-x-4 md:gap-x-32 justify-between px-4 md:px-8 py-4">
         <div className="flex md:flex items-center gap-2 md:gap-8">
           <img src={Coinbaselogo} alt="" className="w-8 h-8" />
@@ -53,7 +53,7 @@ const Menubar = ({ subMenu, setSubmenu, handleActiveMenu, loggedIn }) => {
           <img
             src={SearchIcon}
             alt="searchicon"
-            className=" w-8.5 h-8.5 bg-[#eef0f4] p-1 rounded-full hover:bg-white sm:inline-block"
+            className=" w-7.5 h-7.5 mt-1 bg-[#eef0f4] p-1 rounded-full hover:bg-white sm:inline-block"
           />
           <button className="hidden hover:bg-white sm:inline-flex items-center gap-2 bg-[#eef0f4] px-3 py-1 rounded-full text-sm">
             <PublicIcon fontSize="small" />
