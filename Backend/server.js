@@ -16,8 +16,11 @@ app.use(express.json());
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
 
+console.log("SUPABASE_URL:", supabaseUrl);
+console.log("SUPABASE_SERVICE_KEY:", supabaseServiceKey ? "SET" : "NOT SET");
+
 if (!supabaseUrl || !supabaseServiceKey) {
-    console.warn("Warning: SUPABASE_URL or SUPABASE_SERVICE_KEY is not defined. Set these values in Backend/.env");
+    console.warn("Warning: SUPABASE_URL or SUPABASE_SERVICE_KEY is not defined.");
 }
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
