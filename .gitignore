@@ -1,0 +1,34 @@
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Local environment variables
+.env
+Backend/.env
+Frontend/.env
+
+# Local runtime files
+crypto.json
+crypto.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
