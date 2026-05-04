@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "price": 67500,
+    "image": "BTC",
+    "change_24h": 2.45,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 2,
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "price": 3450,
+    "image": "ETH",
+    "change_24h": 1.82,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 3,
+    "name": "Tether",
+    "symbol": "USDT",
+    "price": 1,
+    "image": "USDT",
+    "change_24h": 0.01,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 4,
+    "name": "Binance Coin",
+    "symbol": "BNB",
+    "price": 580,
+    "image": "BNB",
+    "change_24h": -0.75,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 5,
+    "name": "Ripple",
+    "symbol": "XRP",
+    "price": 0.52,
+    "image": "XRP",
+    "change_24h": 3.21,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 6,
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "price": 1,
+    "image": "USDC",
+    "change_24h": 0.02,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 7,
+    "name": "Solana",
+    "symbol": "SOL",
+    "price": 145,
+    "image": "SOL",
+    "change_24h": 5.67,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 8,
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "price": 0.12,
+    "image": "DOGE",
+    "change_24h": 4.33,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 9,
+    "name": "Cardano",
+    "symbol": "ADA",
+    "price": 0.45,
+    "image": "ADA",
+    "change_24h": -1.23,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 10,
+    "name": "Polkadot",
+    "symbol": "DOT",
+    "price": 7.2,
+    "image": "DOT",
+    "change_24h": 2.89,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 11,
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "price": 35,
+    "image": "AVAX",
+    "change_24h": -3.45,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 12,
+    "name": "Chainlink",
+    "symbol": "LINK",
+    "price": 15,
+    "image": "LINK",
+    "change_24h": 1.56,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 13,
+    "name": "Polygon",
+    "symbol": "MATIC",
+    "price": 0.57,
+    "image": "MATIC",
+    "change_24h": -2.11,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 14,
+    "name": "Litecoin",
+    "symbol": "LTC",
+    "price": 72,
+    "image": "LTC",
+    "change_24h": 0.89,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 15,
+    "name": "Uniswap",
+    "symbol": "UNI",
+    "price": 7.5,
+    "image": "UNI",
+    "change_24h": -4.56,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 16,
+    "name": "Cosmos",
+    "symbol": "ATOM",
+    "price": 9.2,
+    "image": "ATOM",
+    "change_24h": 2.34,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 17,
+    "name": "Filecoin",
+    "symbol": "FIL",
+    "price": 5.8,
+    "image": "FIL",
+    "change_24h": -1.78,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  },
+  {
+    "id": 18,
+    "name": "NEAR Protocol",
+    "symbol": "NEAR",
+    "price": 5.2,
+    "image": "NEAR",
+    "change_24h": 6.12,
+    "created_at": "2026-05-04T14:50:15.126Z"
+  }
+]
