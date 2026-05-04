@@ -21,9 +21,7 @@ app.use(express.json());
 // Temporary hardcoded values for testing
 const supabaseUrl =
   process.env.SUPABASE_URL || "https://htskescdtyznrisbngra.supabase.co";
-const supabaseServiceKey =
-  process.env.SUPABASE_SERVICE_KEY ||
-  "sb_secret_ZgZV6MZhFlrPURtW0xz6mw_efXb7DGR";
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY || "";
 
 console.log("SUPABASE_URL:", supabaseUrl);
 console.log("SUPABASE_SERVICE_KEY:", supabaseServiceKey ? "SET" : "NOT SET");
