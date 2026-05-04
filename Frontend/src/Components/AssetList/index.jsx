@@ -15,96 +15,26 @@ import { useEffect, useState } from "react";
 
 import { mockAccounts } from "./data";
 
-// Fetch all prices from CoinGecko API
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
+// Fetch all prices from backend API
 const fetchAllPricesFromAPI = async () => {
   try {
-    const allIds = [
-      "bitcoin",
-      "ethereum",
-      "tether",
-      "binancecoin",
-      "ripple",
-      "usd-coin",
-      "solana",
-      "dogecoin",
-      "cardano",
-      "polkadot",
-      "avalanche-2",
-      "chainlink",
-      "matic-network",
-      "litecoin",
-      "uniswap",
-      "cosmos",
-      "filecoin",
-      "near",
-      "bitcoin-cash",
-      "ethereum-classic",
-      "0x",
-      "basic-attention-token",
-      "zcash",
-      "maker",
-      "dai",
-      "omg-network",
-      "kyber-network",
-      "augur",
-      "stellar",
-      "eos",
-      "dogecoin",
-      "tezos",
-      "algorand",
-      "dash",
-      "orchid",
-      "compound",
-      "balancer",
-      "yearn-finance",
-      "bancor",
-      "synthetix",
-      "skale",
-      "cardano",
-      "internet-computer",
-      "1inch",
-      "polymath",
-      "amp",
-      "barnbridge",
-      "rally",
-      "clover",
-      "harvest-finance",
-      "mask-network",
-      "fetch-ai",
-      "paxos-standard",
-      "alchemy-pay",
-      "assemble-protocol",
-      "playdapp",
-      "rai",
-      "tribe",
-      "orion-protocol",
-      "iotex",
-      "terrausd",
-      "quickswap",
-      "axie-infinity",
-      "request",
-      "wrapped-luna",
-      "truefi",
-      "radicle",
-      "derivadao",
-      "suku",
-      "rari-governance-token",
-      "xyo",
-      "coti",
-      "horizen",
-    ];
-
-    const response = await fetch(
-      `https://api.coingecko.com/api/v3/simple/price?ids=${allIds.join(",")}&vs_currencies=usd&include_24hr_change=true`,
-    );
+    const response = await fetch(`${API_URL}/crypto`);
 
     if (!response.ok) {
-      return await fetchFromAlternativeAPI(allIds);
+      console.error(
+        "Backend API response not OK:",
+        response.status,
+        response.statusText,
+      );
+      return getMockPrices();
     }
 
     const data = await response.json();
     if (!data || typeof data !== "object") {
-      return await fetchFromAlternativeAPI(allIds);
+      console.error("Invalid backend API response data");
+      return getMockPrices();
     }
     return data;
   } catch (error) {
