@@ -49,57 +49,30 @@ const CRYPTO_CONFIG = {
   ],
 };
 
-// Fetch all prices from CoinGecko API in one call (including 24h change)
+// Fetch all prices from backend API (which calls CoinGecko)
 const fetchAllPricesFromAPI = async () => {
   try {
-    const allIds = [
-      "bitcoin",
-      "ethereum",
-      "tether",
-      "binancecoin",
-      "ripple",
-      "usd-coin",
-      "solana",
-      "dogecoin",
-      "cardano",
-      "polkadot",
-      "avalanche-2",
-      "chainlink",
-      "matic-network",
-      "litecoin",
-      "uniswap",
-      "cosmos",
-      "filecoin",
-      "near",
-    ];
+    const response = await fetch(`${API_URL}/crypto`);
 
-    const response = await fetch(
-      `https://api.coingecko.com/api/v3/simple/price?ids=${allIds.join(",")}&vs_currencies=usd&include_24hr_change=true`,
-    );
-
-    // Check if response is OK
     if (!response.ok) {
       console.error(
-        "API response not OK:",
+        "Backend API response not OK:",
         response.status,
         response.statusText,
       );
-      // Try alternative free API or return cached/mock data
-      return await fetchFromAlternativeAPI(allIds);
+      return getMockPrices();
     }
 
     const data = await response.json();
 
-    // Validate the data structure
     if (!data || typeof data !== "object") {
-      console.error("Invalid API response data");
-      return await fetchFromAlternativeAPI(allIds);
+      console.error("Invalid backend API response data");
+      return getMockPrices();
     }
 
     return data;
   } catch (error) {
     console.error("Error fetching prices:", error);
-    // Return mock data as fallback so UI doesn't show N/A
     return getMockPrices();
   }
 };
