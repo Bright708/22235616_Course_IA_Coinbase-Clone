@@ -87,7 +87,7 @@ const Dashboard = ({ user, onLogout }) => {
 
   if (!user) {
     return (
-      <div className="min-h-screen w-full bg-black text-white flex items-center justify-center">
+      <div className="min-h-screen w-full bg-black text-white flex items-center justify-center font-semibold">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Not Authenticated</h1>
           <p className="text-gray-400 mb-6">
