@@ -166,7 +166,7 @@ const convertToGHS = (usdPrice, exchangeRate = 16.5) => {
   return usdPrice * exchangeRate;
 };
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 
 const SYMBOL_IMAGE_MAP = {
   BTC: Bitcoinimg,
