@@ -4,6 +4,16 @@ import { Box, Divider, Group, HStack, VStack } from "@coinbase/cds-web/layout";
 import { Sidebar, SidebarItem } from "@coinbase/cds-web/navigation";
 import { MediaQueryProvider } from "@coinbase/cds-web/system";
 import { defaultTheme } from "@coinbase/cds-web/themes/defaultTheme";
+import { Text } from "@coinbase/cds-web/typography";
+import {
+  Cpu,
+  CreditCard,
+  DollarSign,
+  Gift,
+  PieChart,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
 import { useState } from "react";
 import { AssetList } from "./Components/AssetList";
 import { CardList } from "./Components/CardList";
@@ -42,6 +52,38 @@ const navItems = [
   },
 ];
 
+const lucideIconMap = {
+  chartPie: PieChart,
+  trading: TrendingUp,
+  pay: CreditCard,
+  newsFeed: Sparkles,
+  giftBox: Gift,
+  cash: DollarSign,
+  defi: Cpu,
+};
+
+const SidebarItemIcon = ({ active, color, icon, isCollapsed, title }) => {
+  const IconComponent = lucideIconMap[icon] ?? PieChart;
+
+  return (
+    <Box
+      alignItems="center"
+      flexDirection="row"
+      gap={2}
+      paddingX={2}
+      paddingY={2}
+      color={color}
+    >
+      <IconComponent color="currentColor" size={18} />
+      {!isCollapsed && (
+        <Text color={color} font="headline">
+          {title}
+        </Text>
+      )}
+    </Box>
+  );
+};
+
 export const AssetDetail = () => {
   const [activeNavIndex, setActiveNavIndex] = useState(0);
   const [search, setSearch] = useState("");
@@ -62,6 +104,7 @@ export const AssetDetail = () => {
                 key={title}
                 active={index === activeNavIndex}
                 icon={icon}
+                Component={SidebarItemIcon}
                 onClick={() => setActiveNavIndex(index)}
                 title={title}
               />
